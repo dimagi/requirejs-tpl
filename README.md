@@ -41,7 +41,7 @@ Typically, you would place them in a ``scripts/libs`` folder then create a ``scr
 require.config({
   paths: {
     underscore: 'libs/underscore',
-    text: 'libs/text'
+    text: 'libs/text',
     tpl: 'libs/tpl'
   },
   shim: {
@@ -57,13 +57,14 @@ Specify the plugin using ``tpl!`` followed by the template file:
 
 ```
 require(['backbone', 'tpl!template'], function (Backbone, template) {
-  return Backbone.View.extend({
-    initialize: function(){
-      this.render();
-    },
-    render: function(){
-      this.$el.html(template({message: 'hello'}));
-  });
+    return Backbone.View.extend({
+        initialize: function() {
+            this.render();
+        },
+        render: function() {
+            this.$el.html(template({message: 'hello'}));
+        }
+    });
 });
 ```
 ## Customization
