@@ -38,7 +38,7 @@ define(['text', 'underscore'], function (text, _) {
         buildTemplateSource = "define('{pluginName}!{moduleName}', function () { return {source}; });\n";
 
     return {
-        version: '0.0.2',
+        version: '0.0.3',
 
         load: function (moduleName, parentRequire, onload, config) {
 
